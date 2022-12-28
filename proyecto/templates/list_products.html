@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>hola desde el template de listado de productoss</h1>
+
+   {% for product in products %}
+    
+      <p>el producto es:{{product.name}}</p> 
+      <p>el precio es: {{product.price}}</p> 
+      {% if product.stock == true %}
+          <p>actualmente hay stock</p> 
+      {% else %}
+          <p>temporalmente sin stock</p>
+      
+      {% endif %}
+
+   {% endfor %} 
+   <head>
+   <body> 
